@@ -1,10 +1,15 @@
-# cat_facts.py
+# cat_facts.js
 Web-API for [alexwohlbruck.github.io/cat-facts](https://alexwohlbruck.github.io/cat-facts) website to retrieve cat facts
 
 ## Example
-```python
-import cat_facts
-cat_facts = cat_facts.CatFacts()
-random_fact = cat_facts.get_random_fact()
-print(random_fact)
+```JavaScript
+async function main() {
+	const { CatFacts } = require("./cat_facts.js")
+	const catFacts = new CatFacts()
+	const randomFact = await catFacts.getRandomFact()
+	console.log(randomFact)
+}
+
+main()
 ```
+
